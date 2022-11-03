@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  - var results = [{"Sams_Item": "Laptop", "Sams_Brand": "HP", "Sams_quantity": 1, "Sams_Item_Price": 456.99},{"Sams_Item": "Air Pots Pro", "Sams_Brand": "Apple", "Sams_quantity": 2, "Sams_Item_Price": 194.56},{"Sams_Item": "TV", "Sams_Brand": "LG", "Sams_quantity": 1, "Sams_Item_Price": 2435.88}]
+  div.container-fluid 
+    div.row 
+        each item, index in results
+            div.col-sm-2 Item Name: #{item["Sams_Item"]} <br> Item Brand: #{item["Sams_Brand"]} <br> Quantity: #{item["Sams_quantity"]} <br> Item Price: #{item["Sams_Item_Price"]}
